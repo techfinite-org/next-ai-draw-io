@@ -10,6 +10,7 @@ import {
     ResizablePanelGroup,
 } from "@/components/ui/resizable"
 import { useDiagram } from "@/contexts/diagram-context"
+import { config } from "@/lib/config"
 
 export default function Home() {
     const { drawioRef, handleDiagramExport, onDrawioLoad } = useDiagram()
@@ -109,12 +110,11 @@ export default function Home() {
                                     ref={drawioRef}
                                     onExport={handleDiagramExport}
                                     onLoad={onDrawioLoad}
+                                    baseUrl="http://localhost:8087"
                                     urlParameters={{
-                                        ui: drawioUi,
-                                        spin: true,
-                                        libraries: false,
-                                        saveAndExit: false,
-                                        noExitBtn: true,
+                                        ...config.drawio.defaultParams,
+                                        ...config.drawio.customParams,
+                                        ui: drawioUi, // Keep dynamic UI state
                                     }}
                                 />
                             ) : (
