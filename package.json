@@ -71,7 +71,7 @@
         "lucide-react": "^0.562.0",
         "motion": "^12.23.25",
         "negotiator": "^1.0.0",
-        "next": "^16.0.7",
+        "next": "^16.3.4",
         "ollama-ai-provider-v2": "^2.0.0",
         "pako": "^2.1.0",
         "prism-react-renderer": "^2.4.1",
@@ -123,7 +123,7 @@
         "tailwindcss": "^4",
         "typescript": "^5",
         "wait-on": "^9.0.3",
-        "wrangler": "4.54.0"
+        "wrangler": "4.131.0"
     },
     "overrides": {
         "@openrouter/ai-sdk-provider": {
